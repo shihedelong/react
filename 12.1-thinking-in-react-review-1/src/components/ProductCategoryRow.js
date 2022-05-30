@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 
 export class ProductCategoryRow extends Component {
   render() {
-    return <div>ProductCategoryRow</div>
+    return (
+      <tr>
+        <th>{this.props.category}</th>
+      </tr>
+    )
   }
 }
 
