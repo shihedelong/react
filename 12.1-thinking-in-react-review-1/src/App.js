@@ -1,7 +1,9 @@
 import './App.css'
+import PRODUCTS from './db.js'
+import FilterableProductTable from './FilterableProductTable'
 
 function App() {
-  return <div></div>
+  return <FilterableProductTable products={PRODUCTS} />
 }
 
 export default App
