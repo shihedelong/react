@@ -3,11 +3,26 @@ import SearchBar from './components/SearchBar'
 import ProductTable from './components/ProductTable'
 
 export class FilterableProductTable extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      filterText: '',
+      inStockOnly: false,
+    }
+  }
+
   render() {
     return (
       <>
-        <SearchBar />
-        <ProductTable products={this.props.products} />
+        <SearchBar
+          filterText={this.state.filterText}
+          inStockOnly={this.state.inStockOnly}
+        />
+        <ProductTable
+          products={this.props.products}
+          filterText={this.state.filterText}
+          inStockOnly={this.state.inStockOnly}
+        />
       </>
     )
   }
